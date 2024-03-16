@@ -1,0 +1,20 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">tiger</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+<!--        this command firstly check table is
+        is present or not if not then create table and perfom operation .if table is already present then
+it directly  perform operations-->
+
+<!--  <property name="hibernate.hbm2ddl.auto">create</property>this command firstly check table is
+is present or not if not then create table and perfom operation .if table is already present then
+fistly drop table and agin create new table and perform operations-->
+
+
+    </session-factory>
+</hibernate-configuration>
